@@ -36,17 +36,4 @@ public abstract class Persona {
     public int getEdad(){
         return Period.between(Fecha, LocalDate.now()).getYears();
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
-    }
-
-    public void setFecha(LocalDate Fecha) {
-        this.Fecha =Fecha ;
-    }
-    
 }
