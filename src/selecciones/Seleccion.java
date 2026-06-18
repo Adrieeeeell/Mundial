@@ -53,4 +53,10 @@ public class Seleccion {
     public Jugador[] getJugadores() {
         return jugadores;
     }
+
+    @Override
+    public String toString() {
+        return "Seleccion{" + "nombre=" + nombre + ", grupo=" + grupo + ", entrenador=" + entrenador + ", jugadores=" + jugadores + ", contador=" + contador + '}';
+    }
+    
 }
