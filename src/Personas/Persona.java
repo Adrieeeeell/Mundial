@@ -45,8 +45,8 @@ public abstract class Persona {
         this.nacionalidad = nacionalidad;
     }
 
-    public void setFecha(String Fecha) {
-        this.Fecha = Fecha;
+    public void setFecha(LocalDate Fecha) {
+        this.Fecha =Fecha ;
     }
     
 }
