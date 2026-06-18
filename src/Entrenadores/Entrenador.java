@@ -5,7 +5,6 @@
 package Entrenadores;
 
 import Personas.Persona;
-import java.time.LocalDate;
 
 /**
  *
