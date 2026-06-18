@@ -4,6 +4,9 @@
  */
 package Personas;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 /**
  *
  * @author Aaron
@@ -11,9 +14,9 @@ package Personas;
 public abstract class Persona {
     protected String nombre;
     protected String nacionalidad;
-    protected String Fecha;
+    protected LocalDate Fecha;
 
-    public Persona(String nombre, String nacionalidad, String Fecha) {
+    public Persona(String nombre, String nacionalidad, LocalDate Fecha) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
         this.Fecha = Fecha;
@@ -27,8 +30,11 @@ public abstract class Persona {
         return nacionalidad;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return Fecha;
+    }
+    public int getEdad(){
+        return Period.between(Fecha, LocalDate.now()).getYears();
     }
 
     public void setNombre(String nombre) {
