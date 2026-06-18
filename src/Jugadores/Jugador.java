@@ -32,17 +32,11 @@ public class Jugador extends Persona {
         this.posicion = posicion;
     }
 
-    public Jugador(String nombre, String nacionalidad, LocalDate fecha, int numero) {
-        super(nombre, nacionalidad, fecha);
-        this.numero = numero;
-        this.posicion = "No asignada";
-    }
-
     @Override
     public String toString() {
         return "Jugador \nNombre: " + getNombre() +
                "\nNacionalidad: " + getNacionalidad() +
-                "\nEdad: " + getFecha() + "\nNumero: " +
+                "\nEdad: " + getEdad() + "\nNumero: " +
                 this.numero + "\nPosicion: " + this.posicion;
     }
     
