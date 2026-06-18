@@ -12,18 +12,18 @@ import java.time.LocalDate;
  */
 public abstract class Entrenador extends Persona{
     
-    private String Experiencia;
+    private int Experiencia;
 
-public Entrenador(String Experiencia, String nombre, String nacionalidad, LocalDate Fecha) {
+public Entrenador(int Experiencia, String nombre, String nacionalidad, LocalDate Fecha) {
         super(nombre,nacionalidad,Fecha);
         this.Experiencia = Experiencia;
     }
   
-    public String getExperiencia() {
+    public int getExperiencia() {
         return Experiencia;
     }
 
-    public void setExperiencia(String Experiencia) {
+    public void setExperiencia(int Experiencia) {
         this.Experiencia = Experiencia;
     }
 
