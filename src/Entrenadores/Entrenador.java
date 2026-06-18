@@ -5,7 +5,7 @@
 package Entrenadores;
 
 import Personas.Persona;
-
+import java.time.LocalDate;
 /**
  *
  * @author Student
@@ -14,8 +14,8 @@ public abstract class Entrenador extends Persona{
     
     private String Experiencia;
 
-public Entrenador(String Experiencia, String nombre, String nacionalidad, String Fecha) {
-        super(nombre, nacionalidad, Fecha);
+public Entrenador(String Experiencia, String nombre, String nacionalidad, LocalDate Fecha) {
+        super(nombre,nacionalidad,Fecha);
         this.Experiencia = Experiencia;
     }
   
@@ -29,7 +29,7 @@ public Entrenador(String Experiencia, String nombre, String nacionalidad, String
 
     @Override
     public String toString() {
-        return "Entrenador"+getNombre()+"Nacionalidad"+getNacionalidad()+"Edad"+getFecha()+"Experiencia"+Experiencia;
+        return "Entrenador"+getNombre()+"Nacionalidad"+getNacionalidad()+"Edad"+getEdad()+"Experiencia"+Experiencia;
     }
     
 }
