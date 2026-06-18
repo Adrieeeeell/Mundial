@@ -5,6 +5,7 @@
 package Arbitros;
 
 import Personas.Persona;
+import java.time.LocalDate;
 
 
 
@@ -13,11 +14,11 @@ import Personas.Persona;
  * @author Aaron
  */
 public class Arbitro extends Persona {
+ 
     private String categoria;
  
-    public Arbitro(String nombre, String nacionalidad,
-                   String fechaNacimiento, String categoria) {
-        super(nombre, nacionalidad, fechaNacimiento);
+    public Arbitro(String nombre, String nacionalidad, LocalDate fecha, String categoria) {
+        super(nombre, nacionalidad, fecha);
         this.categoria = categoria;
     }
  
@@ -31,7 +32,8 @@ public class Arbitro extends Persona {
  
     @Override
     public String toString() {
-        return "Arbitro{nombre=" + getNombre() + ", nacionalidad=" + getNacionalidad()
-                + ", fecha=" + getFecha() + ", categoria=" + categoria + "}";
+        return "Arbitro" + getNombre() + "Nacionalidad" + getNacionalidad()
+                + "Edad" + getEdad() + "Categoria" + categoria;
     }
 }
+ 
