@@ -91,4 +91,10 @@ public class Seleccion {
                "\nEntrenador: " + entrenador.getNombre() +
                "\nJugadores registrados: " + contarJugadores();
     }
+
+    public static class Grupo {
+
+        public Grupo() {
+        }
+    }
 }
