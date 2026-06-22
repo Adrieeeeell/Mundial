@@ -7,7 +7,6 @@ package selecciones;
 import Entrenadores.Entrenador;
 import Jugadores.Jugador;
 
-
 /**
  *
  * @author HP
@@ -32,6 +31,22 @@ public class Seleccion {
         this.contador = 0;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public Entrenador getEntrenador() {
+        return entrenador;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
     public void agregarJugador(Jugador jugador) {
         if (contador < jugadores.length) {
             jugadores[contador] = jugador;
@@ -41,7 +56,7 @@ public class Seleccion {
 
     public void eliminarJugador(Jugador jugador) {
         for (int i = 0; i < contador; i++) {
-            if (jugadores[i].equals(jugador)) {
+            if (jugadores[i].getNombre().equals(jugador.getNombre())) {
                 jugadores[i] = jugadores[contador - 1];
                 jugadores[contador - 1] = null;
                 contador--;
@@ -58,5 +73,5 @@ public class Seleccion {
     public String toString() {
         return "Seleccion{" + "nombre=" + nombre + ", grupo=" + grupo + ", entrenador=" + entrenador + ", jugadores=" + jugadores + ", contador=" + contador + '}';
     }
-    
+
 }
