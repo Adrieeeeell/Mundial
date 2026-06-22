@@ -6,7 +6,12 @@ package selecciones;
  
 import jugadores.Jugador;
 import Entrenadores.Entrenador;
+<<<<<<< HEAD
  
+=======
+import Jugadores.Jugador;
+
+>>>>>>> origin/Dev
 /**
  *
  * @author UTN
@@ -27,6 +32,7 @@ public class Seleccion {
         this.grupo = grupo;
         this.entrenador = entrenador;
     }
+<<<<<<< HEAD
  
     public String getNombre() { return nombre; }
     public Grupo getGrupo() { return grupo; }
@@ -49,6 +55,39 @@ public class Seleccion {
             if (jugadores[i] == null) {
                 jugadores[i] = jugador;
                 return true;
+=======
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Grupo getGrupo() {
+        return grupo;
+    }
+
+    public Entrenador getEntrenador() {
+        return entrenador;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void agregarJugador(Jugador jugador) {
+        if (contador < jugadores.length) {
+            jugadores[contador] = jugador;
+            contador++;
+        }
+    }
+
+    public void eliminarJugador(Jugador jugador) {
+        for (int i = 0; i < contador; i++) {
+            if (jugadores[i].getNombre().equals(jugador.getNombre())) {
+                jugadores[i] = jugadores[contador - 1];
+                jugadores[contador - 1] = null;
+                contador--;
+                break;
+>>>>>>> origin/Dev
             }
         }
         System.out.println("No hay espacio disponible en la seleccion.");
@@ -94,4 +133,9 @@ public class Seleccion {
                "\nEntrenador: " + entrenador.getNombre() +
                "\nJugadores registrados: " + contarJugadores();
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> origin/Dev

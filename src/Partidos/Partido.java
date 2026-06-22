@@ -8,6 +8,10 @@ import Arbitros.Arbitro;
 import Resultados.Resultado;
 import selecciones.Seleccion;
 
+/**
+ *
+ * @author Student
+ */
 public class Partido {
 
     private Seleccion seleccionLocal;
@@ -40,6 +44,26 @@ public class Partido {
         this.resultado = new Resultado();
     }
 
+    public Seleccion getSeleccionLocal() {
+        return seleccionLocal;
+    }
+
+    public Seleccion getSeleccionVisitante() {
+        return seleccionVisitante;
+    }
+
+    public String getEstadio() {
+        return estadio;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
     public void agregarArbitro(Arbitro arbitro) {
         if (contadorArbitros < arbitros.length) {
             arbitros[contadorArbitros] = arbitro;
@@ -49,12 +73,10 @@ public class Partido {
 
     public void eliminarArbitro(Arbitro arbitro) {
         for (int i = 0; i < contadorArbitros; i++) {
-            if (arbitros[i].equals(arbitro)) {
-
+            if (arbitros[i].getNombre().equals(arbitro.getNombre())) {
                 arbitros[i] = arbitros[contadorArbitros - 1];
                 arbitros[contadorArbitros - 1] = null;
                 contadorArbitros--;
-
                 break;
             }
         }
