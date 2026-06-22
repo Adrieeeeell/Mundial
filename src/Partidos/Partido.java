@@ -43,11 +43,18 @@ public class Partido {
 
         this.resultado = new Resultado();
     }
-
+private int buscarArbitro(Arbitro Arbitros)
     public Seleccion getSeleccionLocal() {
         return seleccionLocal;
     }
 
+<<<<<<< HEAD
+    public Seleccion getSeleccionLocal() {
+        return seleccionLocal;
+    }
+
+=======
+>>>>>>> 7b0642c (Se modifico la clase Partido)
     public Seleccion getSeleccionVisitante() {
         return seleccionVisitante;
     }
@@ -59,16 +66,21 @@ public class Partido {
     public String getFecha() {
         return fecha;
     }
+<<<<<<< HEAD
 
     public String getHora() {
         return hora;
     }
 
     public void agregarArbitro(Arbitro arbitro) {
+=======
+    
+    public int agregarArbitro(Arbitro arbitro,int contarArbitros) {
+>>>>>>> 7b0642c (Se modifico la clase Partido)
         if (contadorArbitros < arbitros.length) {
             arbitros[contadorArbitros] = arbitro;
             contadorArbitros++;
-        }
+        }return contarArbitros;
     }
 
     public void eliminarArbitro(Arbitro arbitro) {
@@ -81,6 +93,28 @@ public class Partido {
             }
         }
     }
+    public int ContarArbitros(int contarArbitros){
+        int contador=0;
+        for (int i = 0; i < contadorArbitros; i++) {
+            if (arbitros!=null) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+     public Arbitro buscarArbitroPorNombre(String nombre) {
+        for (int i = 0; i < contadorArbitros; i++) {
+            if (arbitros[i].getNombre().equals(nombre)) {
+                return arbitros[i];
+            }
+        }
+        return null;
+    }
+     public boolean existeArbitro(String nombre){
+         return buscarArbitroPorNombre(nombre)!=null;
+     }
+    
+    //* buscar un arbitro por nombre,contar la cantidad de arbitros asignados, verificar si un arbitro ya se encuentra registrado en el partido*//
 
     public Resultado getResultado() {
         return resultado;
