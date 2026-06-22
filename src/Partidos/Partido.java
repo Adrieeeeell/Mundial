@@ -43,18 +43,10 @@ public class Partido {
 
         this.resultado = new Resultado();
     }
-private int buscarArbitro(Arbitro Arbitros)
     public Seleccion getSeleccionLocal() {
         return seleccionLocal;
     }
 
-<<<<<<< HEAD
-    public Seleccion getSeleccionLocal() {
-        return seleccionLocal;
-    }
-
-=======
->>>>>>> 7b0642c (Se modifico la clase Partido)
     public Seleccion getSeleccionVisitante() {
         return seleccionVisitante;
     }
@@ -66,17 +58,13 @@ private int buscarArbitro(Arbitro Arbitros)
     public String getFecha() {
         return fecha;
     }
-<<<<<<< HEAD
 
     public String getHora() {
         return hora;
     }
 
-    public void agregarArbitro(Arbitro arbitro) {
-=======
     
-    public int agregarArbitro(Arbitro arbitro,int contarArbitros) {
->>>>>>> 7b0642c (Se modifico la clase Partido)
+    public int agregarArbitro(Arbitro arbitro,int contarArbitros){
         if (contadorArbitros < arbitros.length) {
             arbitros[contadorArbitros] = arbitro;
             contadorArbitros++;
