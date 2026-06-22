@@ -13,9 +13,6 @@ import jugadores.Jugador;
  */
 public class Seleccion {
  
-    public enum Grupo {
-        A, B, C, D, E, F, G, H
-    }
  
     private String nombre;
     private Grupo grupo;
